@@ -10,7 +10,23 @@ package Model;
  */
 public class Cliente {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+     protected String nombre;
+    protected String cedula;
+    protected String telefono;
+
+    public Cliente(String nombre, String cedula, String telefono) {
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.telefono = telefono;
+    }
+
+    public double pagar(double valor) {
+        // El cliente normal paga el valor completo
+        return valor;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " | Cédula: " + cedula + " | Tel: " + telefono;
     }
 }
