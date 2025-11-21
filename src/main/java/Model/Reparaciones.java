@@ -10,4 +10,23 @@ package Model;
  */
 public class Reparaciones {
     
+    private String descripcion;
+    private double costo;
+    private Mecanico mecanico;
+
+    public Reparaciones(String descripcion, double costo, Mecanico mecanico) {
+        this.descripcion = descripcion;
+        this.costo = costo;
+        this.mecanico = mecanico;
+    }
+
+    public double getCosto() {
+        return costo;
+    }
+
+    @Override
+    public String toString() {
+        return descripcion + " | $" + costo + " | Mecánico: " + mecanico;
+    }
+    
 }
